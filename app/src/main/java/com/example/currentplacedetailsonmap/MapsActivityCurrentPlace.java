@@ -16,6 +16,13 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+import okhttp3.WebSocket;
+import okhttp3.WebSocketListener;
+import okio.ByteString;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
@@ -44,6 +51,7 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     private static final String TAG = MapsActivityCurrentPlace.class.getSimpleName();
     private GoogleMap mMap;
     private CameraPosition mCameraPosition;
+    private OkHttpClient client;
 
     // The entry point to Google Play services, used by the Places API and Fused Location Provider.
     private GoogleApiClient mGoogleApiClient;
@@ -64,11 +72,12 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     private static final String KEY_LOCATION = "location";
 
     // Used for selecting the current place.
-    private final int mMaxEntries = 5;
+    private final int mMaxEntries = 2;
     private String[] mLikelyPlaceNames = new String[mMaxEntries];
     private String[] mLikelyPlaceAddresses = new String[mMaxEntries];
     private String[] mLikelyPlaceAttributions = new String[mMaxEntries];
     private LatLng[] mLikelyPlaceLatLngs = new LatLng[mMaxEntries];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -130,6 +139,7 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
                 + result.getErrorCode());
     }
 
+    /**
     /**
      * Handles suspension of the connection to the Google Play services client.
      */
@@ -244,6 +254,9 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
         }
     }
 
+    // this is the function that gets called when you click the button
+    public void send(View v) {
+    }
     /**
      * Handles the result of the request for location permissions.
      */
@@ -288,14 +301,14 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
                     mLikelyPlaceAttributions = new String[mMaxEntries];
                     mLikelyPlaceLatLngs = new LatLng[mMaxEntries];
                     for (PlaceLikelihood placeLikelihood : likelyPlaces) {
-                        // Build a list of likely places to show the user. Max 5.
-                        mLikelyPlaceNames[i] = (String) placeLikelihood.getPlace().getName();
-                        mLikelyPlaceAddresses[i] = (String) placeLikelihood.getPlace().getAddress();
-                        mLikelyPlaceAttributions[i] = (String) placeLikelihood.getPlace()
-                                .getAttributions();
-                        mLikelyPlaceLatLngs[i] = placeLikelihood.getPlace().getLatLng();
-
-                        i++;
+//                        // Build a list of likely places to show the user. Max 5.
+//                        mLikelyPlaceNames[i] = (String) placeLikelihood.getPlace().getName();
+//                        mLikelyPlaceAddresses[i] = (String) placeLikelihood.getPlace().getAddress();
+//                        mLikelyPlaceAttributions[i] = (String) placeLikelihood.getPlace()
+//                                .getAttributions();
+//                        mLikelyPlaceLatLngs[i] = placeLikelihood.getPlace().getLatLng();
+//
+//                        i++;
                         if (i > (mMaxEntries - 1)) {
                             break;
                         }
@@ -326,28 +339,17 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        // The "which" argument contains the position of the selected item.
-                        LatLng markerLatLng = mLikelyPlaceLatLngs[which];
-                        String markerSnippet = mLikelyPlaceAddresses[which];
-                        if (mLikelyPlaceAttributions[which] != null) {
-                            markerSnippet = markerSnippet + "\n" + mLikelyPlaceAttributions[which];
-                        }
-                        // Add a marker for the selected place, with an info window
-                        // showing information about that place.
-                        mMap.addMarker(new MarkerOptions()
-                                .title(mLikelyPlaceNames[which])
-                                .position(markerLatLng)
-                                .snippet(markerSnippet));
-
-                        // Position the map's camera at the location of the marker.
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(markerLatLng,
-                                DEFAULT_ZOOM));
                     }
                 };
+        mLikelyPlaceNames[0] = Double.toString(mLastKnownLocation.getLatitude());
+        mLikelyPlaceNames[1] = Double.toString(mLastKnownLocation.getLongitude());
+        start();
+
+
 
         // Display the dialog.
         AlertDialog dialog = new AlertDialog.Builder(this)
-                .setTitle(R.string.pick_place)
+                .setTitle("Send Your Current Location?")
                 .setItems(mLikelyPlaceNames, listener)
                 .show();
     }
@@ -384,4 +386,43 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
             mLastKnownLocation = null;
         }
     }
+
+
+    private final class EchoWebSocketListener extends WebSocketListener {
+        private static final int NORMAL_CLOSURE_STATUS = 1000;
+        @Override
+        public void onOpen(WebSocket webSocket, Response response) {
+            webSocket.send("Hello, it's SSaurel !");
+            webSocket.send("What's up ?");
+            webSocket.send(ByteString.decodeHex("deadbeef"));
+            webSocket.close(NORMAL_CLOSURE_STATUS, "Goodbye !");
+        }
+        @Override
+        public void onMessage(WebSocket webSocket, String text) {
+            mLikelyPlaceNames[0] = text;
+        }
+        @Override
+        public void onMessage(WebSocket webSocket, ByteString bytes) {
+            mLikelyPlaceNames[1] = "on Message : ";
+        }
+        @Override
+        public void onClosing(WebSocket webSocket, int code, String reason) {
+            webSocket.close(NORMAL_CLOSURE_STATUS, null);
+        }
+        @Override
+        public void onFailure(WebSocket webSocket, Throwable t, Response response) {
+            mLikelyPlaceNames[1] = "Error : ";
+        }
+    }
+
+    private void start() {
+        client = new OkHttpClient();
+        Request request = new Request.Builder().url("ws://echo.websocket.org").build();
+        EchoWebSocketListener listener = new EchoWebSocketListener();
+        WebSocket ws = client.newWebSocket(request, listener);
+        client.dispatcher().executorService().shutdown();
+    }
+
 }
+
+

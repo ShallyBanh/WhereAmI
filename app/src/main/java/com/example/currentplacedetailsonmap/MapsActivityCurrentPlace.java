@@ -19,9 +19,10 @@ import android.widget.TextView;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.WebSocket;
-import okhttp3.WebSocketListener;
-import okio.ByteString;
+import okhttp3.RequestBody;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.FormBody;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -40,6 +41,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
+
 /**
  * An activity that displays a map showing the place at the device's current location.
  */
@@ -51,6 +54,8 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     private static final String TAG = MapsActivityCurrentPlace.class.getSimpleName();
     private GoogleMap mMap;
     private CameraPosition mCameraPosition;
+
+    private static final String BASE_URL = "Your Url";
     private OkHttpClient client;
 
     // The entry point to Google Play services, used by the Places API and Fused Location Provider.
@@ -71,13 +76,9 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     private static final String KEY_CAMERA_POSITION = "camera_position";
     private static final String KEY_LOCATION = "location";
 
-    // Used for selecting the current place.
-    private final int mMaxEntries = 2;
-    private String[] mLikelyPlaceNames = new String[mMaxEntries];
-    private String[] mLikelyPlaceAddresses = new String[mMaxEntries];
-    private String[] mLikelyPlaceAttributions = new String[mMaxEntries];
-    private LatLng[] mLikelyPlaceLatLngs = new LatLng[mMaxEntries];
-
+    // Used to store longitude and latitude coordinates 
+    private final int numberOfCoordinates = 2;
+    private String[] mLocationCoordinates = new String[numberOfCoordinates];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,14 +161,14 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     }
 
     /**
-     * Handles a click on the menu option to get a place.
+     * Handles a click on the menu option to send a coordinate.
      * @param item The menu item to handle.
      * @return Boolean.
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.option_get_place) {
-            showCurrentPlace();
+            sendCoordinates();
         }
         return true;
     }
@@ -254,9 +255,6 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
         }
     }
 
-    // this is the function that gets called when you click the button
-    public void send(View v) {
-    }
     /**
      * Handles the result of the request for location permissions.
      */
@@ -278,10 +276,9 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
     }
 
     /**
-     * Prompts the user to select the current place from a list of likely places, and shows the
-     * current place on the map - provided the user has granted location permission.
+     * Sends the current coordinates to the php server
      */
-    private void showCurrentPlace() {
+    private void sendCoordinates() {
         if (mMap == null) {
             return;
         }
@@ -289,38 +286,7 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
         if (mLocationPermissionGranted) {
             // Get the likely places - that is, the businesses and other points of interest that
             // are the best match for the device's current location.
-            @SuppressWarnings("MissingPermission")
-            PendingResult<PlaceLikelihoodBuffer> result = Places.PlaceDetectionApi
-                    .getCurrentPlace(mGoogleApiClient, null);
-            result.setResultCallback(new ResultCallback<PlaceLikelihoodBuffer>() {
-                @Override
-                public void onResult(@NonNull PlaceLikelihoodBuffer likelyPlaces) {
-                    int i = 0;
-                    mLikelyPlaceNames = new String[mMaxEntries];
-                    mLikelyPlaceAddresses = new String[mMaxEntries];
-                    mLikelyPlaceAttributions = new String[mMaxEntries];
-                    mLikelyPlaceLatLngs = new LatLng[mMaxEntries];
-                    for (PlaceLikelihood placeLikelihood : likelyPlaces) {
-//                        // Build a list of likely places to show the user. Max 5.
-//                        mLikelyPlaceNames[i] = (String) placeLikelihood.getPlace().getName();
-//                        mLikelyPlaceAddresses[i] = (String) placeLikelihood.getPlace().getAddress();
-//                        mLikelyPlaceAttributions[i] = (String) placeLikelihood.getPlace()
-//                                .getAttributions();
-//                        mLikelyPlaceLatLngs[i] = placeLikelihood.getPlace().getLatLng();
-//
-//                        i++;
-                        if (i > (mMaxEntries - 1)) {
-                            break;
-                        }
-                    }
-                    // Release the place likelihood buffer, to avoid memory leaks.
-                    likelyPlaces.release();
-
-                    // Show a dialog offering the user the list of likely places, and add a
-                    // marker at the selected place.
-                    openPlacesDialog();
-                }
-            });
+            sendCoordinatesDialog();
         } else {
             // Add a default marker, because the user hasn't selected a place.
             mMap.addMarker(new MarkerOptions()
@@ -330,27 +296,26 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
         }
     }
 
-    /**
-     * Displays a form allowing the user to select a place from a list of likely places.
-     */
-    private void openPlacesDialog() {
-        // Ask the user to choose the place where they are now.
+	/**
+	 * Opens up a dialog window to notify the user that coordinates are being sent 
+	 */
+    private void sendCoordinatesDialog() {
         DialogInterface.OnClickListener listener =
                 new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                     }
                 };
-        mLikelyPlaceNames[0] = Double.toString(mLastKnownLocation.getLatitude());
-        mLikelyPlaceNames[1] = Double.toString(mLastKnownLocation.getLongitude());
-        start();
+        mLocationCoordinates[0] = Double.toString(mLastKnownLocation.getLatitude());
+        mLocationCoordinates[1] = Double.toString(mLastKnownLocation.getLongitude());
+        registerCoordinates(mLocationCoordinates[0], mLocationCoordinates[1]);
 
 
 
         // Display the dialog.
         AlertDialog dialog = new AlertDialog.Builder(this)
-                .setTitle("Send Your Current Location?")
-                .setItems(mLikelyPlaceNames, listener)
+                .setTitle("Sending Your Current Location")
+                .setItems(mLocationCoordinates, listener)
                 .show();
     }
 
@@ -387,42 +352,45 @@ public class MapsActivityCurrentPlace extends AppCompatActivity
         }
     }
 
+	
+	/**
+	 * Sends a POST request which our location coordinates to our php server
+	 */
+    public void registerCoordinates(String lat, String lon) {
+		//Set up our POST request to the php server
+        FormBody.Builder formBuilder = new FormBody.Builder()
+                .add("lat", lat)
+                .add("lon", lon);
+        RequestBody formBody = formBuilder.build();
+        Request request = new Request.Builder().url(BASE_URL).post(formBody).build();
+		
+		
+        client =  new OkHttpClient();
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
 
-    private final class EchoWebSocketListener extends WebSocketListener {
-        private static final int NORMAL_CLOSURE_STATUS = 1000;
-        @Override
-        public void onOpen(WebSocket webSocket, Response response) {
-            webSocket.send("Hello, it's SSaurel !");
-            webSocket.send("What's up ?");
-            webSocket.send(ByteString.decodeHex("deadbeef"));
-            webSocket.close(NORMAL_CLOSURE_STATUS, "Goodbye !");
-        }
-        @Override
-        public void onMessage(WebSocket webSocket, String text) {
-            mLikelyPlaceNames[0] = text;
-        }
-        @Override
-        public void onMessage(WebSocket webSocket, ByteString bytes) {
-            mLikelyPlaceNames[1] = "on Message : ";
-        }
-        @Override
-        public void onClosing(WebSocket webSocket, int code, String reason) {
-            webSocket.close(NORMAL_CLOSURE_STATUS, null);
-        }
-        @Override
-        public void onFailure(WebSocket webSocket, Throwable t, Response response) {
-            mLikelyPlaceNames[1] = "Error : ";
-        }
+            @Override
+            public void onFailure(Call call, IOException e) {
+                System.out.println("Coordinates Not Sent Error" + e.getMessage());
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                try {
+                    String resp = response.body().string();
+                    System.out.println(resp);
+                    if (response.isSuccessful()) {
+                        System.out.println("Sucess, coordinates sent");
+                    }
+                    else {
+                        System.out.println("Failed, coordinates not sent");
+                    }
+                } catch (IOException e) {
+                    System.out.println("Exception caught" + e.getMessage());
+                }
+            }
+        });
     }
-
-    private void start() {
-        client = new OkHttpClient();
-        Request request = new Request.Builder().url("ws://echo.websocket.org").build();
-        EchoWebSocketListener listener = new EchoWebSocketListener();
-        WebSocket ws = client.newWebSocket(request, listener);
-        client.dispatcher().executorService().shutdown();
-    }
-
 }
 
 

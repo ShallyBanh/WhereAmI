@@ -6,7 +6,7 @@ var points = []; //holds the location coordinates
  * Grabs the current and past location coordinates which are stored in a text file.
  */
 function getLocationCoordinates(){
-	var rawFile = new XMLHttpRequest();
+    var rawFile = new XMLHttpRequest();
     rawFile.open("GET", "index.txt", false);
     rawFile.onreadystatechange = function ()
     {
@@ -30,15 +30,15 @@ function getLocationCoordinates(){
  */
 function initMap() {
 	
-	// Grabs all our coordinates
-	getLocationCoordinates();
+    // Grabs all our coordinates
+    getLocationCoordinates();
 	
     var map;
     var bounds = new google.maps.LatLngBounds();
-	var numberOfCoordinates = 0;
-	var numberOfCoordinatesInFile = Math.ceil(points.length/2);
-	var markerCount = numberOfCoordinatesInFile;
-	var iconMarker ="http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
+    var numberOfCoordinates = 0;
+    var numberOfCoordinatesInFile = Math.ceil(points.length/2);
+    var markerCount = numberOfCoordinatesInFile;
+    var iconMarker ="http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
          
     // Display a map on the page
     map = new google.maps.Map(document.getElementById('map'));
@@ -50,10 +50,10 @@ function initMap() {
 			iconMarker = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
 		}
 		
-	    var position = new google.maps.LatLng(Number(points[numberOfCoordinates+1]), Number(points[numberOfCoordinates]));
+	var position = new google.maps.LatLng(Number(points[numberOfCoordinates+1]), Number(points[numberOfCoordinates]));
         bounds.extend(position);
 		
-		var marker = new google.maps.Marker({
+        var marker = new google.maps.Marker({
             position: position,
             map: map,
             icon: iconMarker 

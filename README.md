@@ -17,4 +17,6 @@ The inspiration for this app/project is my mom actually lol. Every time when i g
 - <s>Decent GUI for app (i know it's gonna be really simple but should still look decent)</s>
 - Websocket Communication between client and server (Currently using http)
 - <s>Keep existing data (i.e at least the last 5 locations i've been)</s>
+- Refactor
+- Setup something better than php i.e node.js backend server to catch post requests instead
 

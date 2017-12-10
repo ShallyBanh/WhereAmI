@@ -12,9 +12,10 @@
         android:textColor="#ff000000"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/snippet"
+    <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#ff7f7f7f" />
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:clickable="true" />
 </LinearLayout>

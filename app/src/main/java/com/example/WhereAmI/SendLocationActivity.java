@@ -8,12 +8,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -26,7 +22,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 /**
  * An activity that displays a map showing the place at the device's current location.
@@ -58,6 +53,7 @@ public class SendLocationActivity extends BaseActivity
     private static final String KEY_CAMERA_POSITION = "camera_position";
     private static final String KEY_LOCATION = "location";
     private SendLocationController sendLocationController;
+    private Button sendLocationButton;
 
 
     @Override
@@ -72,7 +68,6 @@ public class SendLocationActivity extends BaseActivity
 
         // Retrieve the content view that renders the map.
         setContentView(R.layout.activity_maps);
-
 
         // Build the Play services client for use by the Fused Location Provider and the Places API.
         // Use the addApi() method to request the Google Places API and the Fused Location Provider.
@@ -89,10 +84,6 @@ public class SendLocationActivity extends BaseActivity
         resolveDependencies();
     }
 
-    public void resolveDependencies(){
-        SendLocationApplication app = getSendLocationApplication();
-        sendLocationController = app.getSendLocationController();
-    }
     /**
      * Saves the state of the map when the activity is paused.
      */
@@ -127,7 +118,7 @@ public class SendLocationActivity extends BaseActivity
                 + result.getErrorCode());
     }
 
-    /**
+
     /**
      * Handles suspension of the connection to the Google Play services client.
      */
@@ -136,29 +127,6 @@ public class SendLocationActivity extends BaseActivity
         Log.d(TAG, "Play services connection suspended");
     }
 
-    /**
-     * Sets up the options menu.
-     * @param menu The options menu.
-     * @return Boolean.
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.current_place_menu, menu);
-        return true;
-    }
-
-    /**
-     * Handles a click on the menu option to send a coordinate.
-     * @param item The menu item to handle.
-     * @return Boolean.
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.option_get_place) {
-            sendCoordinates();
-        }
-        return true;
-    }
 
     /**
      * Manipulates the map when it's available.
@@ -180,18 +148,9 @@ public class SendLocationActivity extends BaseActivity
 
             @Override
             public View getInfoContents(Marker marker) {
-                // Inflate the layouts for the info window, title and snippet.
-                View infoWindow = getLayoutInflater().inflate(R.layout.custom_info_contents,
-                        (FrameLayout)findViewById(R.id.map), false);
-
-                TextView title = ((TextView) infoWindow.findViewById(R.id.title));
-                title.setText(marker.getTitle());
-
-               // TextView snippet = ((TextView) infoWindow.findViewById(R.id.snippet));
-               // snippet.setText(marker.getSnippet());
-
-                return infoWindow;
+                return null;
             }
+
         });
 
         // Turn on the My Location layer and the related control on the map.
@@ -199,6 +158,52 @@ public class SendLocationActivity extends BaseActivity
 
         // Get the current location of the device and set the position of the map.
         getDeviceLocation();
+
+        sendLocationButton = (Button) findViewById(R.id.sendLocation);
+        //Listener for the "Send Location" button. Sends the current location to the server on click
+        sendLocationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mMap == null) {
+                    return;
+                }
+                if (mLocationPermissionGranted) {
+                    sendCoordinates();
+                }
+                else{
+                    showLocationDeniedDialog();
+                }
+            }
+        });
+    }
+
+
+    /**
+     * Handles the result of the request for location permissions.
+     */
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           @NonNull String permissions[],
+                                           @NonNull int[] grantResults) {
+        mLocationPermissionGranted = false;
+        switch (requestCode) {
+            case PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    mLocationPermissionGranted = true;
+                }
+            }
+        }
+        updateLocationUI();
+    }
+
+    /**
+     * Grab any dependencies we need for this activity (i.e controllers)
+     */
+    public void resolveDependencies(){
+        SendLocationApplication app = getSendLocationApplication();
+        sendLocationController = app.getSendLocationController();
     }
 
     /**
@@ -243,42 +248,21 @@ public class SendLocationActivity extends BaseActivity
     }
 
     /**
-     * Handles the result of the request for location permissions.
+     * Create dialog to show that sending current location is denied
      */
-    @Override
-    public void onRequestPermissionsResult(int requestCode,
-                                           @NonNull String permissions[],
-                                           @NonNull int[] grantResults) {
-        mLocationPermissionGranted = false;
-        switch (requestCode) {
-            case PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
-                // If request is cancelled, the result arrays are empty.
-                if (grantResults.length > 0
-                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    mLocationPermissionGranted = true;
-                }
-            }
-        }
-        updateLocationUI();
+    public void showLocationDeniedDialog(){
+        // Display the dialog.
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("Permission to access current location denied")
+                .show();
     }
 
-    public void onSendLocation(View view){
-        if (mMap == null) {
-            return;
-        }
-        if (mLocationPermissionGranted) {
-            sendCoordinates();
-            mMap.addMarker(new MarkerOptions()
-                    .position(mDefaultLocation));
-        }
-
-    }
-
-
+    /**
+     * Sends the location to the server and display a dialog informing the user that the request has been sent
+     */
     private void sendCoordinates() {
         sendLocationController.registerCoordinates(Double.toString(mLastKnownLocation.getLatitude()), Double.toString(mLastKnownLocation.getLongitude()));
 
-        // Display the dialog.
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Sending Your Current Location")
                 .show();

@@ -9,10 +9,10 @@ import okhttp3.RequestBody;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
-/**
- * Created by shallybanh on 2017-12-02.
- */
 
+/**
+ * SendLocationController class. This class will control the send of post requests to the server
+ */
 public class SendLocationController {
     private static final String BASE_URL = "Your Url";
     private OkHttpClient client;

@@ -4,7 +4,7 @@
             "outputFile": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-en-rSG/values-en-rSG.xml",
             "map": [
                 {
-                    "source": "/Users/shallybanh/.gradle/caches/transforms-1/files-1.1/play-services-wallet-10.0.1.aar/54d92db95d1e21bd3502f6f41da09334/res/values-en-rSG/values.xml",
+                    "source": "/Users/shallybanh/.gradle/caches/transforms-1/files-1.1/play-services-wallet-10.0.1.aar/eeb37e4cb4d9e0ff5c02c4449055ba5d/res/values-en-rSG/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

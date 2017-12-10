@@ -27,6 +27,7 @@
     <uses-permission android:name="com.example.currentplacedetailsonmap.permission.C2D_MESSAGE" />
 
     <application
+        android:name="com.example.WhereAmI.SendLocationApplication"
         android:allowBackup="true"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"

@@ -12,6 +12,42 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.1_cec172a12cc13a6116b986162bc05b350ca01b85.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8308ed003522a2ee8958311afcc4cfd0470377cd">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gcm-10.0.1_82a4f77a9ceb108b7e363e4be1120b32a01f0c44.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="408a599ac77cd17fe8e8919326bec617b3d005bd">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wearable-10.0.1_cb325ec642db746c3c08539267796a372c513467.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="39907d5c8f5902fffef30160ca7447c93b82405c">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-appinvite-10.0.1_109263c9b37bceb2a1038f75e601e3f6ffd1b58b.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -21,12 +57,66 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="771267c5b0c7a5b348d3205dcfa1f871af7e0177">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-10.0.1_53f5252364f0e62a8a45723f45da721c62e0a8a6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-10.0.1_eba2ab8ca2d4644eae6079d66a2802d35f72b512.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_e985939896a9aa700fd1874fa443b570c949ee34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-base-10.0.1_3502bc32bcc008ff8f52722c9ebca48209d62b25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-mediarouter-v7-24.0.0_959c59cbfa9db91bd579285fed39b4669072c430.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f23ad0f8e58713ff4b55f61c0bbde3830378347c">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-v4-impl-10.0.1_f5669a9f654bfd0a34b574a8ced5aa115e16ce76.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b955cb3a1ad6f1b6ff728ce1e0cd592c1717b440">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-lite-10.0.1_86795d23361384c0a2662f84912f56ce67d91169.jar" />
     </item>
     <item
         is-multidex="false"
@@ -66,6 +156,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.1_bcdabc3ac20ba1ed83554000d098cb8fb66bd417.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -75,12 +174,39 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-10.0.1_b80cf75cb337b09e9bd10fa64529abfda95a1fce.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="2d5d113b0352ab60946fc44c518cf68fd26cbb79">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wallet-10.0.1_04558b39b871b1b74a31ee39a51b27e79a052e8e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-storage-common-10.0.1_cf971f988bfdd3b7a5c173077cc6fc7a260409e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="7a64bf6dc775198eed9db9468a133adf7dfe6562">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-fitness-10.0.1_1f5948f68733ded7b66df7daefd71164d2a2af87.jar" />
     </item>
     <item
         is-multidex="false"
@@ -111,6 +237,24 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-crash-10.0.1_9b0b18d421e11e550495244ebc363530a6f34dcf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="92c871a22463a247e8a77a9f3fd231c278788c4a">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-panorama-10.0.1_6c1af1c81fb16f47f9c9cff6cb5438ed15043f0a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -120,12 +264,66 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4c829ff0ccfecb28a999ee46d9e75948dfc777a4">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-10.0.1_750e0a072511fd6774b28ce73fd79da8d1b3a12d.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-10.0.1_206a639c5726f1f0202aae2ccc1d10157bf45965.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-appindexing/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ae80d328a8548b4610ead6c624bab8c6a6984f5b">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-appindexing-10.0.1_7139d80d70c8204bbbdab58734d9921e3e36d090.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.1_0b2d6c829873d65e4c50783ee7acb90339a422d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c14f0c89f28cf782e42581ab0aba5f63af39b3d2">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-10.0.1_ca3ec6a073340e3fce8f080f4174ce2ff702046e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6bb5d347ebc0c6ef3c83a905222a688da5d2f7b4">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-10.0.1_67780d078c82d2ff5a1c19e5ed904c09d6f59fef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d0460bf07cc3657e0be518ca01c174493951c6b8">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-10.0.1_bf31d187b9279e29ee968f7516c0a85096eb38d1.jar" />
     </item>
     <item
         is-multidex="false"
@@ -144,6 +342,15 @@
         revision="23.0.3"
         sha1="4b17463c814bdc562fb0392fa3494063623a0904">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-messaging-10.0.1_b80cf75cb337b09e9bd10fa64529abfda95a1fce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-auth-10.0.1_78b17be8a56b84c30761fc1cd19a57e5195569d3.jar" />
     </item>
     <item
         is-multidex="false"
@@ -183,6 +390,33 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.1_b2f6e5d7043ddb68f50883d60fda01ba78477a74.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="028f8255cb977b29cdffbfcf05caa0459686120c">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-drive-10.0.1_b565a9b232388097a00e1530845b138dd6e078b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.0.1_20fc4428119ab972440afba6e5ed3f81d5dbd4f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -198,6 +432,15 @@
         revision="23.0.3"
         sha1="b1df8fa3d372a27e4e969ce00b00689ee1eed031">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-api-10.0.1_076702d816c070daa0e98440eaa7ee537619065a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-10.0.1_856af266114b529a3b9816272f0cc520533a75aa.jar" />
     </item>
     <item
         is-multidex="false"
@@ -237,12 +480,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="1d193729baf37df3d902a423291423a0df7e3779">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-clearcut-10.0.1_6f753a67d6406c56ee5eeeb95bcdc78b1adff004.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="c14f0c89f28cf782e42581ab0aba5f63af39b3d2">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-plus-10.0.1_ca3ec6a073340e3fce8f080f4174ce2ff702046e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-10.0.1_6b856e6ceb141447508b2fcdd44b3063d9cab747.jar" />
     </item>
     <item
         is-multidex="false"
@@ -255,12 +516,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-10.0.1_206a639c5726f1f0202aae2ccc1d10157bf45965.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="98476622f10715998eacf9240d6b479f12c66143">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/okio-1.6.0_15bd234a5080aab56ede7e5b257eadf484e3e278.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-connection-10.0.1_e6d06a4df0b6bff3fa26b356c901e9476034581b.jar" />
     </item>
     <item
         is-multidex="false"
@@ -282,12 +561,84 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="57c2eceb8548de84509d1ebc293fedec53231f6c">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-gass-10.0.1_e216e943d5e2d7986490d0477a28cfce0e92368f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.1_93a8ef0188031744afee1e360d9e39893a67f8f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_2ad616add0f723c2cc0ac9351858ca511b7833e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_34ba40ade135a7395c1d869fa3d5484f8ada98ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ba6aa5e69ef31dee57208125323cee958fc67565">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-vision-10.0.1_e621d31d806926d81668720cb0cda5e977e0cee8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.1_e985939896a9aa700fd1874fa443b570c949ee34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-10.0.1_0eb53bb418250a2dd64138a80d27808e759fe5eb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="45305e6af414dab5aba6c3225081c2f15c3bdd1e">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-instantapps-10.0.1_da6434a54bf4aa85f5f36837845d7f1aa9ef93d0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f3e51e9c5233b8897f61e08a6a27bc36283c2724">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-places-10.0.1_6714c1783175e5e344575c8eda67e1787f151d21.jar" />
     </item>
     <item
         is-multidex="false"
@@ -318,12 +669,57 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="971509bbe30bb7b971fc1c49d7b23d0d818830ac">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-10.0.1_1e33e3c5880f6d9ab9b8e729fe38e1212284fbad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="df1cb17511aabbb63264a0024949d1e42502a512">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-cast-framework-10.0.1_7ac229eeec56eca1223b4808b7c2c320a6800a7b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4385ccc0a88b33d182a836eadb47be55c8eb1107">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-awareness-10.0.1_6fa948d8b7dbb054ea77c99fcc40f996fa44aafd.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-10.0.1_ed55118459a3e631a8fb86bd94d96768ceb22a68.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="44a694d4095be84c2888764b1f7256b385c030ad">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-location-10.0.1_bf2d0ce1f554b30762d84a19f30a64f387983cb0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/okio-1.6.0_15bd234a5080aab56ede7e5b257eadf484e3e278.jar" />
     </item>
     <item
         is-multidex="false"
@@ -336,6 +732,33 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c6e1f361e9d61aece9dac39b77fcc98a337a144d">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-nearby-10.0.1_5b0d26d8b8857103be7b79cd5a4c60c456cad8cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.0.1/b34c1f2d993044656e87f88970b6818e99e886ba/okhttp-3.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/okhttp-3.0.1_ad40bda1b6f9d4ac1c88b71cc12c00e25a4399a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="25438f55fc6d906a0e72f30b21487541430ede43">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-base-10.0.1_8e3b988047ff9732b964012df431a2196dbe4c57.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -345,12 +768,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a48dc0b148059764d32500be558702d5ff932058">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-identity-10.0.1_119c24ba4343db8c66d5bed348bff4d20b4e0dad.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.1_2ad616add0f723c2cc0ac9351858ca511b7833e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-10.0.1_9f95a8610a241026e210f0e1a9331b28bdcc142a.jar" />
     </item>
     <item
         is-multidex="false"
@@ -369,6 +810,15 @@
         revision="23.0.3"
         sha1="4385ccc0a88b33d182a836eadb47be55c8eb1107">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-awareness-10.0.1_6fa948d8b7dbb054ea77c99fcc40f996fa44aafd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="1e11c68fec92a17c84dd8d1dd80e74c4e67b12e2">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-games-10.0.1_dc1611507b05f38dd953ccbad7fedd1f13b816a6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -408,6 +858,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_578791a2c1364bd622f1fe005acd1fb748af9bd3.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -426,6 +885,33 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ffc15e965a9e8c28f24455eedd4cac215c45d1fc">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-config-10.0.1_df3bf1e9e256edbac665ec3b94cf77d3fcb3488e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.1_826fde1080d271fb618ea0704ac2272128de5418.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f6cf557be4dbd0282ea2388633e5378634423226">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-safetynet-10.0.1_842b1183c14f0c185dbeca3a7ead536ab0309d58.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -435,12 +921,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/design/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-design-22.2.0_40d3b0270ba96574d958ea8ef99096fe8e31d5d4.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.0.1/b34c1f2d993044656e87f88970b6818e99e886ba/okhttp-3.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/okhttp-3.0.1_ad40bda1b6f9d4ac1c88b71cc12c00e25a4399a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2d5d113b0352ab60946fc44c518cf68fd26cbb79">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-wallet-10.0.1_04558b39b871b1b74a31ee39a51b27e79a052e8e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -480,6 +984,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.1_a1bddd53cf54f325192ecbca08d3cb7137d1d3f2.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -516,12 +1029,57 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-palette-v7-24.0.0_9ef20c5ee99084c4bb3b09bf47207456ea24bd25.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="dd39827d2067497e60e21da48a7926000b6d4b0c">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-storage-10.0.1_99b643b709f57bd5ad337eb0fc3e90e1fe7cca3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.1_578791a2c1364bd622f1fe005acd1fb748af9bd3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_34ba40ade135a7395c1d869fa3d5484f8ada98ba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-10.0.1_ed55118459a3e631a8fb86bd94d96768ceb22a68.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e871881b36b32e6bfd271a830c6eeb54ff0fc185">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-analytics-impl-10.0.1_efddd07651d96963700d8cc450f326664fd602d5.jar" />
     </item>
     <item
         is-multidex="false"
@@ -534,12 +1092,30 @@
     </item>
     <item
         is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-auth-10.0.1_08d24249c5a70f5b468988db5290e6216d66de2b.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
         <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-maps-10.0.1_20fc4428119ab972440afba6e5ed3f81d5dbd4f7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/10.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b1df8fa3d372a27e4e969ce00b00689ee1eed031">
+        <dex dex="/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tagmanager-api-10.0.1_076702d816c070daa0e98440eaa7ee537619065a.jar" />
     </item>
     <item
         is-multidex="false"

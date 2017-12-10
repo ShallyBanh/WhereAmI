@@ -1,4 +1,4 @@
-#Sat Dec 02 22:06:26 MST 2017
+#Sun Dec 10 02:43:31 MST 2017
 base.0=/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/transforms/dexMerger/debug/2
+path.0=classes.dex
 renamed.0=classes.dex
-file.0=/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/transforms/dexMerger/debug/2/classes.dex

@@ -78,7 +78,6 @@ public class SendLocationActivity extends BaseActivity
         // Retrieve the content view that renders the map.
         setContentView(R.layout.activity_maps);
 
-        resolveDependencies();
 
         // Build the Play services client for use by the Fused Location Provider and the Places API.
         // Use the addApi() method to request the Google Places API and the Fused Location Provider.
@@ -91,11 +90,12 @@ public class SendLocationActivity extends BaseActivity
                 .addApi(Places.PLACE_DETECTION_API)
                 .build();
         mGoogleApiClient.connect();
+
+        resolveDependencies();
     }
 
     public void resolveDependencies(){
-        getSendLocationApplication();
-        SendLocationApplication app = this.getSendLocationApplication();
+        SendLocationApplication app = getSendLocationApplication();
         sendLocationController = app.getSendLocationController();
     }
     /**

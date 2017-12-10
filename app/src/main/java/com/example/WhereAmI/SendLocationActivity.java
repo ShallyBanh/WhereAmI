@@ -1,6 +1,5 @@
 package com.example.WhereAmI;
 
-import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -12,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
@@ -57,11 +57,6 @@ public class SendLocationActivity extends BaseActivity
     // Keys for storing activity state.
     private static final String KEY_CAMERA_POSITION = "camera_position";
     private static final String KEY_LOCATION = "location";
-
-    // Used to store longitude and latitude coordinates 
-    private final int numberOfCoordinates = 2;
-    private String[] mLocationCoordinates = new String[numberOfCoordinates];
-
     private SendLocationController sendLocationController;
 
 
@@ -267,45 +262,25 @@ public class SendLocationActivity extends BaseActivity
         updateLocationUI();
     }
 
-    /**
-     * Sends the current coordinates to the php server
-     */
-    private void sendCoordinates() {
+    public void onSendLocation(View view){
         if (mMap == null) {
             return;
         }
-
         if (mLocationPermissionGranted) {
-            // Get the likely places - that is, the businesses and other points of interest that
-            // are the best match for the device's current location.
-            sendCoordinatesDialog();
-        } else {
-            // Add a default marker, because the user hasn't selected a place.
+            sendCoordinates();
             mMap.addMarker(new MarkerOptions()
                     .position(mDefaultLocation));
         }
+
     }
 
-	/**
-	 * Opens up a dialog window to notify the user that coordinates are being sent 
-	 */
-    private void sendCoordinatesDialog() {
-        DialogInterface.OnClickListener listener =
-                new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                };
-        mLocationCoordinates[0] = Double.toString(mLastKnownLocation.getLatitude());
-        mLocationCoordinates[1] = Double.toString(mLastKnownLocation.getLongitude());
-        sendLocationController.registerCoordinates(mLocationCoordinates[0], mLocationCoordinates[1]);
 
-
+    private void sendCoordinates() {
+        sendLocationController.registerCoordinates(Double.toString(mLastKnownLocation.getLatitude()), Double.toString(mLastKnownLocation.getLongitude()));
 
         // Display the dialog.
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Sending Your Current Location")
-                .setItems(mLocationCoordinates, listener)
                 .show();
     }
 
@@ -317,16 +292,12 @@ public class SendLocationActivity extends BaseActivity
             return;
         }
 
-        /*
-         * Request location permission, so that we can get the location of the
-         * device. The result of the permission request is handled by a callback,
-         * onRequestPermissionsResult.
-         */
         if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
                 android.Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             mLocationPermissionGranted = true;
-        } else {
+        }
+        else {
             ActivityCompat.requestPermissions(this,
                     new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                     PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION);

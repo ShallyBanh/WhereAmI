@@ -4,10 +4,27 @@
   <script src="https://npmcdn.com/react@0.14.2/dist/react.min.js"></script>
   <script src="https://npmcdn.com/react-dom@0.14.2/dist/react-dom.min.js"></script>
   <script src="https://npmcdn.com/google-map-react@0.14.6/dist/GoogleMapReact.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0Yy4F50uTY87Zi_WiHwIpbreQ_uCxYGU&libraries=places"></script>
+  <link rel="stylesheet" href="https://sdks.shopifycdn.com/polaris/1.9.1/polaris.min.css" />
   <meta charset="utf-8">
   <title>JS Bin</title>
 </head>
 <body>
-  <div id="main"></div>
+  <!-- <div style="height: 250px; float: right;">
+  <div><button type="button" class="Polaris-Button" tabindex="0" aria-controls="Popover2" aria-owns="Popover2" aria-haspopup="true" aria-expanded="false"><span class="Polaris-Button__Content"><span>More actions</span></span></button></div>
+</div> -->
+<div class="" style="margin-left: 70%; float:right; width: 40%">
+  <div class="Polaris-Labelled__LabelWrapper">
+    <div class="Polaris-Label"><label id="TextField1Label" for="TextField1" class="Polaris-Label__Text">Search Location</label></div>
+  </div>
+  <div class="Polaris-TextField"><input id="TextField1" value="" class="Polaris-TextField__Input" aria-labelledby="TextField1Label" aria-invalid="false">
+    <div class="Polaris-TextField__Backdrop"></div>
+  </div>
+</div>
+<!-- <div style ="float:right; margin-top:40%;">
+  <input id="pac-input" type="text" style="float:right; margin-top:40%;" placeholder="Enter a location">
+</div> -->
+  <div id="main" style = "height: 100%;"></div>
 </body>
+  <script src ="maps.js"></script>
 </html>

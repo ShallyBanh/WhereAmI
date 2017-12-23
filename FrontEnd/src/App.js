@@ -1,7 +1,7 @@
-
 import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
+import ActionList from '@shopify/polaris';
 
 const AnyReactComponent = ({ text }) => (
   <div style={{
@@ -36,7 +36,7 @@ class SimpleMap extends React.Component {
 
 
 ReactDOM.render(
-  <div style={{width: '100%', height: '400px'}}>
+  <div style={{width: '60%', height: '100%'}}>
     <SimpleMap/>
   </div>,
   document.getElementById('main')

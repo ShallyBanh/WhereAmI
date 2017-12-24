@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@shopify/polaris": "^1.0.1",
+    "firebase": "^4.8.1",
     "google-map-react": "^0.26.0",
     "google-maps-react": "^1.1.2",
     "react": "^15.4.2",
@@ -15,6 +16,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "deploy": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

@@ -1,5 +1,6 @@
 package com.example.WhereAmI;
 
+import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -265,6 +266,11 @@ public class SendLocationActivity extends BaseActivity
 
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Sending Your Current Location")
+                .setNegativeButton("Okay",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,int id) {
+                        dialog.cancel();
+                    }
+                })
                 .show();
     }
 

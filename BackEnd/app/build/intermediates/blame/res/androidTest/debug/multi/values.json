@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "outputFile": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 96
                 },
                 "from": {
-                    "file": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support.test/rules/0.5/res/values/values.xml",
+                    "file": "/Users/shallybanh/.android/build-cache/9c07ea39ce1410bf233491c57044e409b73902e1/output/res/values/values.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 201
                 },
                 "from": {
-                    "file": "/Users/shallybanh/Dev/WhereAmI/app/build/generated/res/resValues/androidTest/debug/values/generated.xml",
+                    "file": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/generated/res/resValues/androidTest/debug/values/generated.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,

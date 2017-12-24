@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.android/build-cache/26323ad6ab579524814718f990bca750136423c4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c0c1a3e2d79d11a9fbb39575c8d091b4ca633e69/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.android/build-cache/84806c408115ae0c1aa409ecfc9b151b078ba553/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_00e9847101ff3d935f643061e96ce55b1baf4c44/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.android/build-cache/9bb179c0938178ac0d1b2e326e3053760bccfbf2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4776256c2d575b66e9a319a3522956cf8d61c2a1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.android/build-cache/1ab3808e555f3d1d163a9aecd0c049f7d4276a7a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0d191c1a09e4892d059e5ce749e4ad4e08129e35">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_19ba7cb21a31db3031c65e1eb71bc2ab9f0f5c86/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3d0c599db104382839cb44dd97af4bfd43394651/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.android/build-cache/dc1315e86e6d49091ccb8ef93ab0e7709b8677fb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e9a9ebe17f346ad547218f62afa2f6eb96a5fcbb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.android/build-cache/7771aa58a0eaf6d246d4db6e559dd9b2d71ca716/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_10545f1f1e94a4da18f5f6261567b06851161c03/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.android/build-cache/daed078651e9b01c63fc2bc0679bedf1470aa3ee/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c03bf57f358aa10d253f21989e93bcf6014b3b17">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e54cc5b65e03fa103bb0d7b31f64d7a5c77ca2a2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ecb496cc08dd52551fc5ec6db3bc0632e95a89bb">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9c38d0a8bb53ed0e3e216534596e9dcf1e78fa46/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.1/support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.1_93a8ef0188031744afee1e360d9e39893a67f8f7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.0.1/b34c1f2d993044656e87f88970b6818e99e886ba/okhttp-3.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.0.1_ad40bda1b6f9d4ac1c88b71cc12c00e25a4399a4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_15bd234a5080aab56ede7e5b257eadf484e3e278/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.android/build-cache/f10eef7f1ba7726bd19fb86d3eb674e953ef8316/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0e7de97a97fe59ca494d88d33782e83062d43461/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/.android/build-cache/a6a6528faab53502a8525e37a52a5bacdb75f109/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fc63b820d54c8a27a3a614bdd93920e0076581c2">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dc1b40b12790bcdc2ca804c7668b6c713b206642/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="81428dfe7c70340f354d47cd4b1491b1a8e38001">
+        <dex dex="/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_efc07cfa26dfd929d30d666f8d59deae045976dc/classes.dex" />
+    </item>
+
+</items>

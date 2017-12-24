@@ -14,7 +14,7 @@ import okhttp3.FormBody;
  * SendLocationController class. This class will control the send of post requests to the server
  */
 public class SendLocationController {
-    private static final String BASE_URL = "Your Url";
+    private static final String BASE_URL = "http://10.0.2.2";
     private OkHttpClient client;
 
     /**

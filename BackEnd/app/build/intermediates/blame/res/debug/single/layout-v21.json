@@ -1,22 +1,22 @@
 [
     {
-        "merged": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/res/merged/debug/layout-v21/place_autocomplete_fragment.xml",
-        "source": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.0.1/res/layout-v21/place_autocomplete_fragment.xml"
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/layout-v21/notification_action_tombstone.xml"
     },
     {
-        "merged": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action_tombstone.xml"
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_icon_group.xml"
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/layout-v21/notification_action.xml"
     },
     {
-        "merged": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_action.xml"
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/layout-v21/place_autocomplete_fragment.xml",
+        "source": "/Users/shallybanh/.android/build-cache/4bb1ef398ea0c8c5ad1fd4b4d168e705128cd3b1/output/res/layout-v21/place_autocomplete_fragment.xml"
     },
     {
-        "merged": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/shallybanh/Dev/WhereAmI/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.1/res/layout-v21/notification_template_custom_big.xml"
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/layout-v21/notification_template_icon_group.xml"
     }
 ]

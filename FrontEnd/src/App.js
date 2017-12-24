@@ -1,43 +1,85 @@
-import ReactDOM from 'react-dom';
-import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
-import ActionList from '@shopify/polaris';
+import React from 'react';
 
-const AnyReactComponent = ({ text }) => (
-  <div style={{
-    position: 'relative', color: 'white', background: 'red',
-    height: 40, width: 60, top: -20, left: -30,
-  }}>
-    {text}
-  </div>
-);
+import './index.css';
 
-class SimpleMap extends React.Component {
-  static defaultProps = {
-    center: {lat: 59.95, lng: 30.33},
-    zoom: 11
-  };
+export default class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      zoom: 13,
+      maptype: 'roadmap',
+      place_formatted: '',
+      place_id: '',
+      place_location: '',
+    };
+  }
+
+  componentDidMount() {
+    let map = new window.google.maps.Map(document.getElementById('map'), {
+      center: {lat: -33.8688, lng: 151.2195},
+      zoom: 13,
+      mapTypeId: 'roadmap',
+    });
+
+    map.addListener('zoom_changed', () => {
+      this.setState({
+        zoom: map.getZoom(),
+      });
+    });
+
+    map.addListener('maptypeid_changed', () => {
+      this.setState({
+        maptype: map.getMapTypeId(),
+      });
+    });
+
+    let marker = new window.google.maps.Marker({
+      map: map,
+      position: {lat: -33.8688, lng: 151.2195},
+    });
+
+    new window.google.maps.Marker({
+      map: map,
+      position: {lat: -33, lng: 152},
+    });
+
+    // initialize the autocomplete functionality using the #pac-input input box
+    let inputNode = document.getElementById('pac-input');
+    map.controls[window.google.maps.ControlPosition.TOP_LEFT].push(inputNode);
+    let autoComplete = new window.google.maps.places.Autocomplete(inputNode);
+
+    autoComplete.addListener('place_changed', () => {
+      let place = autoComplete.getPlace();
+      let location = place.geometry.location;
+
+      this.setState({
+        place_formatted: place.formatted_address,
+        place_id: place.place_id,
+        place_location: location,
+      });
+
+      document.getElementById("Long").value = this.state.place_location.lng().toString();
+      document.getElementById("Lat").value = this.state.place_location.lat().toString();
+
+      // bring the selected place in view on the map
+      map.fitBounds(place.geometry.viewport);
+      map.setCenter(location);
+
+      marker.setPlace({
+        placeId: place.place_id,
+        location: location,
+      });
+    });
+  }
 
   render() {
     return (
-       <GoogleMapReact
-        defaultCenter={this.props.center}
-        defaultZoom={this.props.zoom}
-      >
-        <AnyReactComponent
-          lat={59.955413}
-          lng={30.337844}
-          text={'Kreyser Avrora'}
-        />
-      </GoogleMapReact>
+      <div id='app'>
+      <div id="locationInput">
+        <input id="pac-input" class="Polaris-TextField__Input"/>
+      </div>
+        <div id='map' />
+      </div>
     );
-  }
 }
-
-
-ReactDOM.render(
-  <div style={{width: '60%', height: '100%'}}>
-    <SimpleMap/>
-  </div>,
-  document.getElementById('main')
-);
+}

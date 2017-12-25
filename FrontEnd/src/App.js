@@ -1,4 +1,13 @@
 import React from 'react';
+import {
+  Page,
+  Layout,
+  Card,
+  Popover,
+  DescriptionList,
+  Button,
+} from '@shopify/polaris';
+import '@shopify/polaris/styles.css';
 
 import './index.css';
 
@@ -12,6 +21,7 @@ export default class App extends React.Component {
       place_id: '',
       place_location: '',
     };
+    this.markerList = [];
   }
 
   componentDidMount() {
@@ -57,9 +67,10 @@ export default class App extends React.Component {
         place_id: place.place_id,
         place_location: location,
       });
+      this.markerList.push({term: place.formatted_address, description: "Latitude: " + location.lat().toString() + " Longitude: " + location.lng().toString()});
 
-      document.getElementById("Long").value = this.state.place_location.lng().toString();
-      document.getElementById("Lat").value = this.state.place_location.lat().toString();
+      // document.getElementById("Long").value = this.state.place_location.lng().toString();
+      // document.getElementById("Lat").value = this.state.place_location.lat().toString();
 
       // bring the selected place in view on the map
       map.fitBounds(place.geometry.viewport);
@@ -75,10 +86,22 @@ export default class App extends React.Component {
   render() {
     return (
       <div id='app'>
-      <div id="locationInput">
-        <input id="pac-input" class="Polaris-TextField__Input"/>
+
+      <div id ="righthandside">
+      <Page style>
+        <Layout sectioned>
+          <Card sectioned>
+            <DescriptionList
+              items={this.markerList}
+            />
+          </Card>
+        </Layout>
+      </Page>
       </div>
+      <div id="lefthandside">
+        <input id="pac-input" class="Polaris-TextField__Input"/>
         <div id='map' />
+      </div>
       </div>
     );
 }

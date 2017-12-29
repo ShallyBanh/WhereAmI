@@ -16,12 +16,12 @@
         "source": "/Users/shallybanh/.android/build-cache/813f5e5c49a231d36ecb016d0ad315d1ef396d4f/output/res/drawable-mdpi-v4/ic_close_dark.png"
     },
     {
-        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_speaker_dark.png",
-        "source": "/Users/shallybanh/.android/build-cache/813f5e5c49a231d36ecb016d0ad315d1ef396d4f/output/res/drawable-mdpi-v4/ic_speaker_dark.png"
-    },
-    {
         "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_forward_30_white_36.png",
         "source": "/Users/shallybanh/.android/build-cache/afa8fc427eb6f6ad450b738e1630cd9d54128643/output/res/drawable-mdpi-v4/quantum_ic_forward_30_white_36.png"
+    },
+    {
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_speaker_dark.png",
+        "source": "/Users/shallybanh/.android/build-cache/813f5e5c49a231d36ecb016d0ad315d1ef396d4f/output/res/drawable-mdpi-v4/ic_speaker_dark.png"
     },
     {
         "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_pause_grey600_48.png",
@@ -48,12 +48,12 @@
         "source": "/Users/shallybanh/.android/build-cache/a187a025a196377eaa7ad328909d38586ed9ed86/output/res/drawable-mdpi-v4/common_google_signin_btn_text_light_pressed.9.png"
     },
     {
-        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
-        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png",
         "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/drawable-mdpi-v4/abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/drawable-mdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_star_half_black_36dp.png",
@@ -88,16 +88,16 @@
         "source": "/Users/shallybanh/.android/build-cache/4bb1ef398ea0c8c5ad1fd4b4d168e705128cd3b1/output/res/drawable-mdpi-v4/places_ic_search.png"
     },
     {
-        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_light.png",
+        "source": "/Users/shallybanh/.android/build-cache/4bb1ef398ea0c8c5ad1fd4b4d168e705128cd3b1/output/res/drawable-mdpi-v4/powered_by_google_light.png"
     },
     {
         "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/common_google_signin_btn_icon_light_pressed.9.png",
         "source": "/Users/shallybanh/.android/build-cache/a187a025a196377eaa7ad328909d38586ed9ed86/output/res/drawable-mdpi-v4/common_google_signin_btn_icon_light_pressed.9.png"
     },
     {
-        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/powered_by_google_light.png",
-        "source": "/Users/shallybanh/.android/build-cache/4bb1ef398ea0c8c5ad1fd4b4d168e705128cd3b1/output/res/drawable-mdpi-v4/powered_by_google_light.png"
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png",
+        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/drawable-mdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/drawable-mdpi-v4/quantum_ic_play_arrow_white_24.png",

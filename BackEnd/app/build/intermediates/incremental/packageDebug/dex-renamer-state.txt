@@ -1,4 +1,4 @@
-#Sat Dec 23 22:21:42 MST 2017
+#Thu Dec 28 13:07:10 MST 2017
 base.0=/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_efc07cfa26dfd929d30d666f8d59deae045976dc
 renamed.1=classes.dex
 renamed.0=classes2.dex

@@ -28,12 +28,12 @@
         "source": "/Users/shallybanh/.android/build-cache/a187a025a196377eaa7ad328909d38586ed9ed86/output/res/color/common_google_signin_btn_text_dark.xml"
     },
     {
-        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
-        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/color/abc_secondary_text_material_dark.xml"
-    },
-    {
         "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/color/wallet_primary_text_holo_light.xml",
         "source": "/Users/shallybanh/.android/build-cache/dd1e1c64cbd69e70710563631dae6aaf9658acc2/output/res/color/wallet_primary_text_holo_light.xml"
+    },
+    {
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/color/abc_secondary_text_material_dark.xml",
+        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/color/abc_secondary_text_material_dark.xml"
     },
     {
         "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/color/wallet_secondary_text_holo_dark.xml",

@@ -60,12 +60,12 @@
         "source": "/Users/shallybanh/.android/build-cache/afa8fc427eb6f6ad450b738e1630cd9d54128643/output/res/layout/cast_intro_overlay.xml"
     },
     {
-        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
-        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/layout/abc_activity_chooser_view.xml"
-    },
-    {
         "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/layout/cast_expanded_controller_activity.xml",
         "source": "/Users/shallybanh/.android/build-cache/afa8fc427eb6f6ad450b738e1630cd9d54128643/output/res/layout/cast_expanded_controller_activity.xml"
+    },
+    {
+        "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/layout/abc_activity_chooser_view.xml",
+        "source": "/Users/shallybanh/.android/build-cache/16b8945a853a296d8a3871412de8d973a613e0e9/output/res/layout/abc_activity_chooser_view.xml"
     },
     {
         "merged": "/Users/shallybanh/Documents/Dev/WhereAmI/BackEnd/app/build/intermediates/res/merged/debug/layout/notification_action.xml",

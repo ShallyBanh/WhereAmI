@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "yourdatabaseusername";
-$password = "youdatabasepassword";
-$database = "yourdatabasename";
+$username = "yourusername";
+$password = "yourpass";
+$database = "yourdb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -16,10 +16,8 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
-    header('Content-Type: application/json');
     while($row = $result->fetch_assoc()) {
-        $data = $row["Lon"]. ",". $row["Lat"];
-        echo json_encode($row);
+        echo "<br> lon: ". $row["Lon"]. " - lat: ". $row["Lat"]. "<br>";
     }
 } else {
     echo "0 results";

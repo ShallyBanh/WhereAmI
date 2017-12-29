@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "yourdatabaseusername";
-$password = "youdatabasepassword";
-$database = "yourdatabasename";
+$username = "yourusername";
+$password = "yourpass";
+$database = "yourdb";
 $lon=$_POST["lon"];
 $lat=$_POST["lat"];
 

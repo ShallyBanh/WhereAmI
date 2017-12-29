@@ -4,9 +4,7 @@ import {
   Page,
   Layout,
   Card,
-  Popover,
   DescriptionList,
-  Button,
 } from '@shopify/polaris';
 import '@shopify/polaris/styles.css';
 import axios from 'axios';
@@ -23,7 +21,6 @@ export default class App extends React.Component {
       place_id: '',
       place_location: '',
       points: [],
-      markerList: [],
     };
     this.markerList = [];
     this.map;
@@ -35,18 +32,17 @@ export default class App extends React.Component {
     geocoder.geocode({'location': latlng}, function(results, status) {
       if (status === 'OK') {
         if (results[0]) {
-          return results[0].formatted_address;
+          this.address = results[0].formatted_address;
         } else {
-          return "";
+          this.address = "";
         }
       } else {
-        return "";
+        this.address = "";
       }
     });
   }
 
   updateMarkers(){
-    var bounds = new google.maps.LatLngBounds();
     var geocoder = new google.maps.Geocoder;
     var numberOfCoordinates = 0;
     var oldPointsMarkerIcon ="http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
@@ -55,7 +51,6 @@ export default class App extends React.Component {
     var point = this.state.points;
     var lastPoint;
     var iconMarker;
-    var markerList = [];
     for(var idx =0; idx <this.state.points.length; idx++){
 
       // Grabs all our coordinates
@@ -77,12 +72,7 @@ export default class App extends React.Component {
           map: this.map,
           icon: iconMarker
       });
-
-      // var address = this.geocodeLatLng(geocoder, this.map, lat, lon);
-      markerList.push({term: "test", description: "Latitude: " + lat.toString() + " Longitude: " + lon.toString()});
     }
-
-    this.setState({markerList: markerList});
 
     this.map.setCenter(lastPoint);
     this.map.setZoom(11);
@@ -91,7 +81,7 @@ export default class App extends React.Component {
 
   getLocationCoordinates(){
     var points = [];
-    axios.get('http://shallywhereami.000webhostapp.com/readFromDB.php')
+    axios.get('https://shallywhereami.000webhostapp.com/readFromDB.php')
     .then((response) => {
       var matches = (response.data).split("}")
       for(var coordinateIdx =0; coordinateIdx < matches.length -1; coordinateIdx++){
@@ -141,28 +131,11 @@ export default class App extends React.Component {
         place_id: place.place_id,
         place_location: location,
       });
-
-//       var geocoder = new google.maps.Geocoder;
-// var infowindow = new google.maps.InfoWindow;
-//
-// document.getElementById('submit').addEventListener('click', function() {
-//   geocodeLatLng(geocoder, map, infowindow);
-// });
-// }
-
-
-      // document.getElementById("Long").value = this.state.place_location.lng().toString();
-      // document.getElementById("Lat").value = this.state.place_location.lat().toString();
-
-      // bring the selected place in view on the map
-
+      this.markerList.push({term: place.formatted_address, description: "Latitude: " + location.lat().toString()+ " Longitude: " + location.lng().toString()});
       this.map.fitBounds(place.geometry.viewport);
       this.map.setCenter(location);
 
-      // marker.setPlace({
-      //   placeId: place.place_id,
-      //   location: location,
-      // });
+
     });
   }
 
@@ -175,7 +148,7 @@ export default class App extends React.Component {
         <Layout sectioned>
           <Card sectioned>
             <DescriptionList
-              items={this.state.markerList}
+              items={this.markerList}
             />
           </Card>
         </Layout>

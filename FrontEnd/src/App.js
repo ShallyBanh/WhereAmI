@@ -27,17 +27,33 @@ export default class App extends React.Component {
     this.getLocationCoordinates();
   }
 
-  geocodeLatLng(geocoder, map, lat, lon) {
+  geocodeLatLng(geocoder, map, lat, lon, time, idx, iconMarker) {
     var latlng = {lat: lat, lng: lon};
+    var infowindow = new google.maps.InfoWindow();
     geocoder.geocode({'location': latlng}, function(results, status) {
       if (status === 'OK') {
         if (results[0]) {
-          this.address = results[0].formatted_address;
-        } else {
-          this.address = "";
+            var address = results[0].formatted_address;
+            var contentString =
+              '<h1>Address: '+  address + '</h1>' +
+              '<h1>Time: '+ time + '</h1>' +
+              '<h2>Latitiude: ' + lat + '</h2>' +
+              '<h2>Longitude: ' + lon + '</h2>';
+
+            var marker = new google.maps.Marker({
+                position: latlng,
+                map: map,
+                icon: iconMarker,
+                title: time
+            });
+
+            google.maps.event.addListener(marker, 'click', (function (marker, idx) {
+                return function () {
+                    infowindow.setContent(contentString);
+                    infowindow.open(this.map, marker);
+                }
+            })(marker, idx));
         }
-      } else {
-        this.address = "";
       }
     });
   }
@@ -47,22 +63,16 @@ export default class App extends React.Component {
     var numberOfCoordinates = 0;
     var oldPointsMarkerIcon ="http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
     var currenPointMarkerIcon = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
-
     var point = this.state.points;
     var lastPoint;
     var iconMarker;
 
-    var infowindow = new google.maps.InfoWindow();
-
     for(var idx =0; idx <this.state.points.length; idx++){
-
       // Grabs all our coordinates
       var lat = Number( point[idx]["lat"] );
       var lon = Number( point[idx]["lon"] );
       var time = String( point[idx]["time"] );
       var position = new google.maps.LatLng( lat,  lon );
-
-
       if(idx == this.state.points.length - 1){
         iconMarker = currenPointMarkerIcon;
         lastPoint = position;
@@ -70,33 +80,15 @@ export default class App extends React.Component {
       else{
         iconMarker = oldPointsMarkerIcon;
       }
-
-      var contentString = '<h1>Time: '+ time + '</h1>' +
-      "<h2>Lat: " + lat + "</h2>" + "<h2>Lon: " + lon + '</h2>';
-
-      var marker = new google.maps.Marker({
-          position: {lat: lat, lng: lon},
-          map: this.map,
-          icon: iconMarker,
-          title: time
-      });
-
-      google.maps.event.addListener(marker, 'click', (function (marker, idx) {
-          return function () {
-              infowindow.setContent(contentString);
-              infowindow.open(this.map, marker);
-          }
-      })(marker, idx));
+      this.geocodeLatLng(geocoder, this.map, lat, lon, time, idx, iconMarker);
+      this.map.setCenter(lastPoint);
+      this.map.setZoom(11);
     }
-
-    this.map.setCenter(lastPoint);
-    this.map.setZoom(11);
-
   }
 
   getLocationCoordinates(){
     var points = [];
-    axios.get('https://shallywhereami.000webhostapp.com/readFromDBTime.php')
+    axios.get('https://shallywhereami.000webhostapp.com/readFromDB.php')
     .then((response) => {
       var matches = (response.data).split("}")
       for(var coordinateIdx =0; coordinateIdx < matches.length -1; coordinateIdx++){

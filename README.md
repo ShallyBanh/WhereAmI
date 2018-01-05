@@ -8,7 +8,7 @@ From the Android side, you can send out your location coordinates. And after sen
 ![ScreenShot](https://github.com/ShallyBanh/WhereAmI/blob/master/ScreenShots/AndroidSide.png)
 ![ScreenShot](https://github.com/ShallyBanh/WhereAmI/blob/master/ScreenShots/AndroidSideSend.png)
 
-After sending out your coordinates, you can see your current and past locations on the client side/web app. The blue markers on the map represent old locations you've been to and the red marker represents your most recent/current location.
+After sending out your coordinates, you can see your current and past locations on the client side/web app. The blue markers on the map represent old locations you've been to and the red marker represents your most recent/current location. You can also click on the markers to get more information i.e the name of the location, the time the location was sent, and the latitude and longitude of the location.
 ![ScreenShot](https://github.com/ShallyBanh/WhereAmI/blob/master/ScreenShots/DesktopExample.png)
 
 ## Inspiration

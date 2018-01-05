@@ -8,7 +8,9 @@ From the Android side, you can send out your location coordinates. And after sen
 ![ScreenShot](https://github.com/ShallyBanh/WhereAmI/blob/master/ScreenShots/AndroidSide.png)
 ![ScreenShot](https://github.com/ShallyBanh/WhereAmI/blob/master/ScreenShots/AndroidSideSend.png)
 
-After sending out your coordinates, you can see your current and past locations on the client side/web app. The blue markers on the map represent old locations you've been to and the red marker represents your most recent/current location. You can also click on the markers to get more information i.e the name of the location, the time the location was sent, and the latitude and longitude of the location.
+After sending out your coordinates, you can see your current and past locations on the client side/web app. The blue markers on the map represent old locations you've been to and the red marker represents your most recent/current location.
+
+You can also click on the markers to get more information i.e the name of the location, the time the location was sent, and the latitude and longitude of the location.
 ![ScreenShot](https://github.com/ShallyBanh/WhereAmI/blob/master/ScreenShots/DesktopExample.png)
 
 ## Inspiration
@@ -29,11 +31,12 @@ Or you can see on https://shallywhereami.000webhostapp.com/ (Note: currently hav
 
 
 ## To Do
-- SSH tunnel between client and server
+- SSH tunnel between client and server (or use secure websockets)
 - <s>Decent GUI for app (i know it's gonna be really simple but should still look decent)</s>
 - Websocket Communication between client and server (Currently using http)
 - <s>Keep existing data (i.e at least the last 5 locations i've been)</s>
 - <s> Refactor android side </s>
 - <s> Front end using react </s>
 - <s> Setup a proper database for storage </s>
+- <s> Add time stamps and addresses to markers </s>
 - Setup something better than php i.e node.js backend server to catch post requests instead

@@ -24,6 +24,7 @@
     "build": "react-scripts build",
     "webpack": "webpack",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "freshtall": "npm cache clean --force && rm -rf node_modules && rm -f package-lock.json && npm install"
   }
 }

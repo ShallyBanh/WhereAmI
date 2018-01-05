@@ -51,11 +51,15 @@ export default class App extends React.Component {
     var point = this.state.points;
     var lastPoint;
     var iconMarker;
+
+    var infowindow = new google.maps.InfoWindow();
+
     for(var idx =0; idx <this.state.points.length; idx++){
 
       // Grabs all our coordinates
-      var lat = Number( point[idx]["lat"]);
-      var lon = Number( point[idx]["lon"]) ;
+      var lat = Number( point[idx]["lat"] );
+      var lon = Number( point[idx]["lon"] );
+      var time = String( point[idx]["time"] );
       var position = new google.maps.LatLng( lat,  lon );
 
 
@@ -67,11 +71,22 @@ export default class App extends React.Component {
         iconMarker = oldPointsMarkerIcon;
       }
 
-      new google.maps.Marker({
+      var contentString = '<h1>Time: '+ time + '</h1>' +
+      "<h2>Lat: " + lat + "</h2>" + "<h2>Lon: " + lon + '</h2>';
+
+      var marker = new google.maps.Marker({
           position: {lat: lat, lng: lon},
           map: this.map,
-          icon: iconMarker
+          icon: iconMarker,
+          title: time
       });
+
+      google.maps.event.addListener(marker, 'click', (function (marker, idx) {
+          return function () {
+              infowindow.setContent(contentString);
+              infowindow.open(this.map, marker);
+          }
+      })(marker, idx));
     }
 
     this.map.setCenter(lastPoint);
@@ -81,15 +96,16 @@ export default class App extends React.Component {
 
   getLocationCoordinates(){
     var points = [];
-    axios.get('https://shallywhereami.000webhostapp.com/readFromDB.php')
+    axios.get('https://shallywhereami.000webhostapp.com/readFromDBTime.php')
     .then((response) => {
       var matches = (response.data).split("}")
       for(var coordinateIdx =0; coordinateIdx < matches.length -1; coordinateIdx++){
-        var coordinate = matches[coordinateIdx].replace("{", "").replace("\"Lon\":", "").replace("\"Lat\":", "");
-        var lnglat = coordinate.split(",");
-        lnglat[0] = lnglat[0].replace(/"/g, "");
-        lnglat[1] = lnglat[1].replace(/"/g, "");
-        points.push({ lon: lnglat[0], lat: lnglat[1]});
+        var coordinate = matches[coordinateIdx].replace("{", "").replace("\"Lon\":", "").replace("\"Lat\":", "").replace("\"Time\":", "");
+        var data = coordinate.split(",");
+        data[0] = data[0].replace(/"/g, "");
+        data[1] = data[1].replace(/"/g, "");
+        data[2] = data[2].replace(/"/g, "");
+        points.push({ lon: data[0], lat: data[1], time: data[2]});
       }
       this.setState({points: points}, function() {
         this.updateMarkers();

@@ -17,20 +17,6 @@ A text container is used to wrap text elements such as paragraphs, headings, and
 
 ---
 
-## Purpose
-
-Put the merchant first by identifying the problem they face and the component that helps them solve it.
-
-### Problem
-
-Typographic elements such as headers, paragraphs, and lists sometimes require different spacing to create proper relationships between them.
-
-### Solution
-
-Wrap the text elements in a text container component. This will distribute the spacing between them evenly.
-
----
-
 ## Best practices
 
 The closer the spacing, the closer the relationship between content topics. The closeness visually represents the relationship.
@@ -38,9 +24,6 @@ The closer the spacing, the closer the relationship between content topics. The 
 Use tight spacing to relate content topics to each other
 Use loose spacing to separate concepts that are independent of each other
 
-| Prop | Type | Description |
-| ---- | ---- | ----------- |
-| spacing | enum['tight', 'loose'] | The amount of vertical spacing children will get between them |
 ## Examples
 
 ### Default text container

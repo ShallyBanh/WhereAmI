@@ -88,7 +88,7 @@ export default class App extends React.Component {
 
   getLocationCoordinates(){
     var points = [];
-    axios.get('https://shallywhereami.000webhostapp.com/readFromDB.php')
+    axios.get('https://shallywhereami.000webhostapp.com/demoRead.php')
     .then((response) => {
       var matches = (response.data).split("}")
       for(var coordinateIdx =0; coordinateIdx < matches.length -1; coordinateIdx++){
